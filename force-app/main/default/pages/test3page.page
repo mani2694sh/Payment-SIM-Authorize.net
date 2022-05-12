@@ -1,0 +1,38 @@
+<apex:page controller="PaymentController2">
+    
+    <script type="text/javascript">
+    	setTimeout(function(){document.getElementById('submitbtn').click();},5000); 
+        //use to autoclick button after 5 sec
+        //use button id 
+    </script>
+        
+    <form method="POST" action="https://test.authorize.net/gateway/transact.dll" id="DemoCheckoutForm">
+        <input type="hidden" name="x_fp_hash" value="{!fingerprintfinal}" />
+        <input type="hidden" name="x_fp_sequence" value="{!Sequence1}" />
+        <input type="hidden" name="x_fp_timestamp" value="{!TimeStamp}" />
+        
+        <INPUT TYPE="HIDDEN" NAME="x_login" VALUE="{!apilogin}" />
+        <INPUT TYPE="HIDDEN" NAME="x_transKey" VALUE="{!apitranskey}" />
+        
+        <INPUT TYPE="HIDDEN" NAME="x_version" VALUE="3.1" />
+        <INPUT TYPE="HIDDEN" NAME="x_method" VALUE="CC" />
+        
+        <INPUT TYPE="HIDDEN" NAME="X_test_request" VALUE="False"/>
+        <INPUT TYPE="HIDDEN" NAME="x_show_form" VALUE="PAYMENT_FORM" />
+        
+        <INPUT TYPE="HIDDEN" NAME="x_invoice_num" VALUE="45678941" />
+        <input type="hidden" name="x_description" value="Driving License"/>
+        <INPUT TYPE="HIDDEN" NAME="x_cust_id" VALUE="Manish" />
+        <INPUT TYPE="HIDDEN" NAME="x_amount" VALUE="{!amount}" />
+        
+        <INPUT TYPE="HIDDEN" NAME="x_relay_response" VALUE="TRUE"/>
+        <INPUT TYPE="HIDDEN" NAME="Crypto" VALUE="BouncyCastle"/>
+        
+        <INPUT TYPE="HIDDEN" NAME="UrlAddress" VALUE="https://aithent-developer-edition.ap27"/> 
+        <INPUT TYPE="HIDDEN" NAME="x_relay_url" VALUE=""/>
+        
+        Payment Link: 
+        <input type="submit" id="submit-btn" value="Test3"/>
+    </form>
+        
+</apex:page>

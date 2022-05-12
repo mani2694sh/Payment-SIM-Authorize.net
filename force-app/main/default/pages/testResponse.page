@@ -1,0 +1,52 @@
+<apex:page controller="testResponseController">
+    {!ResponseMsg} <!--methos call from controller to get values of all fileds--> 
+    <table>
+        <th>Payment Result</th>
+        <tr>
+            <td>Response_code: </td>
+            <td><input id="x_response_code" type="text" value="{!param1}"/></td>
+        </tr>
+        <tr>
+            <td>Response_reason_code: </td>
+            <td><input id="x_response_reason_code" type="text" value="{!param2}"/></td>
+        </tr>
+        <tr>
+            <td>Auth_code: </td>
+            <td><input id="x_auth_code" type="text" value="{!param3}"/></td>
+        </tr>
+        <tr>
+            <td>AVS_code: </td>
+            <td><input id="x_avs_code" type="text" value="{!param4}"/></td>
+        </tr>
+        <tr>
+            <td>Trans_id: </td>
+            <td><input id="x_trans_id" type="text" value="{!param5}"/></td>
+        </tr>
+        <tr>
+            <td>Amount: </td>
+            <td><input id="x_amount" type="text" value="{!param6}"/></td>
+        </tr>
+        <tr>
+            <td>Card_type: </td>
+            <td><input id="x_card_type" type="text" value="{!param7}"/></td>
+        </tr>
+        <tr>
+            <td>Cvv2_resp_code: </td>
+            <td><input id="x_cvv2_resp_code" type="text" value="{!param8}"/></td>
+        </tr>
+        <tr>
+            <td>Description: </td>
+            <td><input id="x_description" type="text" value="{!param9}"/></td>
+        </tr>
+        <tr>
+            <td>Invoice_number: </td>
+            <td><input id="x_invoice_number" type="text" value="{!param10}"/></td>
+        </tr>
+        <tr>
+            <td>Method: </td>
+            <td><input id="x_method" type="text" value="{!param11}"/></td>
+        </tr>
+        
+    </table>
+    
+</apex:page>
